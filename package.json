@@ -1,0 +1,27 @@
+{
+  "name": "keg-count",
+  "version": "1.0.0",
+  "description": "keg tracking application",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/baillar2/keg-count.git"
+  },
+  "author": "SB",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/baillar2/keg-count/issues"
+  },
+  "homepage": "https://github.com/baillar2/keg-count#readme",
+  "dependencies": {
+    "bcryptjs": "^2.4.0",
+    "body-parser": "^1.15.2",
+    "express": "^4.14.0",
+    "express-session": "^1.14.2",
+    "mongoose": "^4.7.2",
+    "morgan": "^1.7.0"
+  }
+}
