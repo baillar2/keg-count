@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>KegKount - Keg Tracking</title>
+		<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.css">
+		<link rel="stylesheet" type="text/css" href="main.css">
+	</head>
+	<body class="container-fluid">
+		<div class="page-header">
+			<h1>KegKount <small>The easiest way to track and move inventory.</small></h1>
+		</div>
+		<div role="navigation">
+			<ul class="nav nav-tabs">
+  				<li class="active"><a href="#">Accounts</a></li>
+  				<li><a href="#">Beer</a></li>
+  				<li><a href="#">Add Account</a></li>
+  				<li><a href="#">Add Beer</a></li>
+			</ul>
+		</div>
+		<div>
+			<ol>
+				<li nq-repeat="cust in accounts">
+					<h3>{{cust.name}}</h3>
+					<h2>{{cust.contact}} {{cust.number}}</h2>
+					<h2>{{cust.address}}</h2>
+					<button class="btn btn-primary">Place Order</button>
+
+				</li>
+			</ol>
+		</div>
+
+
+
+
+
+
+
+
+	
+	</body>
+	<script type="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.js"></script>
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.js"></script>
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.9/angular.js"></script>
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.9/angular-route.min.js"></script>
+	<script type="text/javascript" src="angularMod.js"></script>
+	<script type="text/javascript" src="main.js"></script>
+</html>
