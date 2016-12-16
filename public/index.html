@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html ng-app="app">
 	<head>
 		<title>KegKount - Keg Tracking</title>
 		<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.css">
@@ -10,7 +10,7 @@
 			<h1>KegKount <small>The easiest way to track and move inventory.</small></h1>
 		</div>
 		<div role="navigation">
-			<ul class="nav nav-tabs">
+			<ul ng-controller="KegControl" class="nav nav-tabs">
   				<li class="active"><a href="#">Accounts</a></li>
   				<li><a href="#">Beer</a></li>
   				<li><a href="#">Add Account</a></li>
@@ -18,15 +18,22 @@
 			</ul>
 		</div>
 		<div>
-			<ol>
+			<ul>
 				<li nq-repeat="cust in accounts">
 					<h3>{{cust.name}}</h3>
-					<h2>{{cust.contact}} {{cust.number}}</h2>
-					<h2>{{cust.address}}</h2>
-					<button class="btn btn-primary">Place Order</button>
-
+					<h4>{{cust.contact}} {{cust.number}}</h4>
+					<h4>{{cust.address}}</h4>
+					<div class="btn-group">
+						<button type="button" class="btn btn-info">Order History</button>
+					</div>
+					<div class="btn-group">
+						<button type="button" class="btn btn-primary">Place Order</button>
+					</div>
+					<div class="btn-group">
+						<button type="button" class="btn btn-warning">Edit Account</button>
+					</div>
 				</li>
-			</ol>
+			</ul>
 		</div>
 
 
@@ -40,7 +47,7 @@
 	</body>
 	<script type="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.js"></script>
 	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.js"></script>
-	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.9/angular.js"></script>
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.0/angular.js"></script>
 	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.9/angular-route.min.js"></script>
 	<script type="text/javascript" src="angularMod.js"></script>
 	<script type="text/javascript" src="main.js"></script>
