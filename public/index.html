@@ -5,12 +5,12 @@
 		<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.css">
 		<link rel="stylesheet" type="text/css" href="main.css">
 	</head>
-	<body class="container-fluid">
+	<body ng-controller="kegControl" class="container-fluid">
 		<div class="page-header">
 			<h1>KegKount <small>The easiest way to track and move inventory.</small></h1>
 		</div>
 		<div role="navigation">
-			<ul ng-controller="KegControl" class="nav nav-tabs">
+			<ul class="nav nav-tabs">
   				<li class="active"><a href="#">Accounts</a></li>
   				<li><a href="#">Beer</a></li>
   				<li><a href="#">Add Account</a></li>
@@ -19,10 +19,11 @@
 		</div>
 		<div>
 			<ul>
-				<li nq-repeat="cust in accounts">
-					<h3>{{cust.name}}</h3>
-					<h4>{{cust.contact}} {{cust.number}}</h4>
-					<h4>{{cust.address}}</h4>
+				<li ng-repeat="bar in accounts">
+					<h3>{{bar.name}}</h3>
+					<h4>{{bar.contact}}</h4>
+					<h4> {{bar.number}}</h4>
+					<h4>{{bar.address}}</h4>
 					<div class="btn-group">
 						<button type="button" class="btn btn-info">Order History</button>
 					</div>
@@ -35,6 +36,23 @@
 				</li>
 			</ul>
 		</div>
+		<div>
+			<ul>
+				<li ng-repeat="beer in beers">
+					<h3>{{beer.name}}</h3>
+					<h4>{{beer.style}}</h4>
+					<h4>{{beer.abv}}% ABV</h4>
+					<h4>{{beer.availability}} Gallons</h4>
+					<div class="btn-group">
+						<button type="button" class="btn btn-primary">Place Order</button>
+					</div>
+					<div class="btn-group">
+						<button type="button" class="btn btn-warning">Edit Beer</button>
+					</div>
+				</li>
+			</ul>
+
+		</div>
 
 
 
@@ -45,10 +63,10 @@
 
 	
 	</body>
-	<script type="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.js"></script>
-	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.js"></script>
-	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.0/angular.js"></script>
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.0/jquery.js"></script>
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/js/bootstrap.js"></script>
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.9/angular.js"></script>
 	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.9/angular-route.min.js"></script>
-	<script type="text/javascript" src="angularMod.js"></script>
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/danialfarid-angular-file-upload/12.0.1/ng-file-upload.js"></script>
 	<script type="text/javascript" src="main.js"></script>
 </html>
