@@ -11,10 +11,14 @@ angular.module('app',[])
 					   number:'517-980-4218',
 					   address:'nowhere town'}]
 		
-		
 		console.log(s.accounts, 'array')
-		console.log(s.beers, 'beers')
+		
 	}])
+
+
+
+
+
 
 .controller('accountControl', ['$scope', '$http', function($scope, $http){
 	var s = $scope
@@ -29,7 +33,7 @@ angular.module('app',[])
 				style:'Oatmeal Stout',
 				abv:'6.6',
 				availability:'155'}]
-
+	console.log(s.beers, 'beers')
 }
 .controller('addAccControl' ['$scope', '$http', function($scope, $http){
 	var s = $scope
