@@ -2,6 +2,7 @@ angular.module('app',[])
 	.controller('kegControl', ['$scope', '$http', function($scope, $http){
 		console.log('module loaded')
 		var s = $scope		
+		var h = $http
 		s.accounts = [{name:'Little Machine', 
 					   contact:'Sean Baillargeon', 
 					   number:'517-980-4218',
@@ -12,13 +13,16 @@ angular.module('app',[])
 					   address:'nowhere town'}]
 		
 		console.log(s.accounts, 'array')
+
+		h.get('/')
+			.then(function(serverData){
+				console.log('page loaded')
+			})
+
+
+
 		
 	}])
-
-
-
-
-
 
 .controller('accountControl', ['$scope', '$http', function($scope, $http){
 	var s = $scope
@@ -34,10 +38,10 @@ angular.module('app',[])
 				abv:'6.6',
 				availability:'155'}]
 	console.log(s.beers, 'beers')
-}
-.controller('addAccControl' ['$scope', '$http', function($scope, $http){
-	var s = $scope
 }])
-.controller('addBeerControl', ['$scope', '$http', function($scope, $http){
-	var s = $scope
-}])
+//.controller('addAccControl' ['$scope', '$http', function($scope, $http){
+//	var s = $scope
+//}])
+//.controller('addBeerControl', ['$scope', '$http', function($scope, $http){
+//	var s = $scope
+//}])
